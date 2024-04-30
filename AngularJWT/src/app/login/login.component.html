@@ -1,0 +1,26 @@
+<app-navbar></app-navbar>
+<h2 style="color: navy;" align="center">Login Form</h2>
+<div style="color: red;" align="center">{{form.message}}</div>
+<table align="center">
+    <tr>
+        <th>LoginId:-</th>
+        <td><input type="text" [(ngModel)]="form.loginId"></td>
+        <div style="color: red;">
+            <td *ngIf="inputerror.loginId!=null">{{inputerror.loginId}}</td>
+        </div>
+    </tr>
+    <tr>
+        <th>Password:-</th>
+        <td><input type="text" [(ngModel)]="form.password"></td>
+        <div style="color: red;">
+            <td *ngIf="inputerror.password!=null">{{inputerror.password}}</td>
+        </div>
+
+    </tr>
+    <tr>
+        <th></th>
+        <td><button (click)="signIn()">SignIn</button>&nbsp;
+            <a href="sign-up()">Sign Up</a>
+        </td>
+    </tr>
+</table>
