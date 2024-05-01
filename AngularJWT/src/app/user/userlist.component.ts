@@ -55,7 +55,7 @@ this.search();
   }
   delete() {
     var self = this;
-    this.Httpservice.get('http://localhost:8080/User/delete' + this.form.deleteParams.id, function (res: any) {
+    this.Httpservice.get('http://localhost:8080/User/delete/' + this.form.deleteParams.id, function (res: any) {
       self.form.message = res.result.message;
       self.form.pageNo = 0;
       self.search();
